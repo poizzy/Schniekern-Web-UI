@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Bot } from '../api';
 
 @Component({
   selector: 'app-player-detail',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class PlayerDetailComponent implements OnInit {
 
   constructor() { }
+
+  bots: Bot[] = [];
 
   ngOnInit(): void {
   }

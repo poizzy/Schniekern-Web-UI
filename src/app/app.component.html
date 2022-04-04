@@ -1,11 +1,17 @@
-<h2>Players</h2>
-
-<ul class="heroes">
-  <li *ngFor="let bot of bots">
-    <nav>
-      <a routerLink="/detail/{{bot.id}}">{{bot.name}}</a>
-    </nav>
-  </li>
-</ul>
-
+<div class="sidebar">
+  <ul class="player">
+    <h1>Players</h1>
+    <li *ngFor="let bot of bots">
+      <nav>
+        <a routerLink="/detail/{{bot.id}}">
+          <span class="icon"><fa-icon [icon]="faUser"></fa-icon></span>
+          <span class="item">{{bot.name}}</span>
+        </a>
+      </nav>
+    </li>
+    <a class="back" routerLink="/">
+      <span class="icon-home"><fa-icon [icon]="faHome"></fa-icon></span>
+      <span class="item">Startseite</span></a>
+  </ul>
+</div>
 <router-outlet></router-outlet>
