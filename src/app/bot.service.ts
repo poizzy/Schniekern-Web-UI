@@ -6,7 +6,12 @@ import { Bot } from "./api";
 @Injectable({
   providedIn: 'root'
 })
-export class BotService { 
+export class BotService {
+  getBot(id: string): Observable<Bot> {
+    return this.http.get<Bot>(this.apiurl + "/" + id).pipe(
+      tap(_=> console.log("hallo"))
+      )
+  } 
 
   constructor(private http : HttpClient) { }
 

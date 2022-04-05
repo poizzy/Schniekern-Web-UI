@@ -1,3 +1,18 @@
-<div class="detail">
-    test
+<div class="detail" *ngIf="bot">
+    <h1>{{bot.name}}</h1>
+</div>
+
+<div class="box" *ngIf="bot">
+    <div class="str">Games<br>Won</div>
+    <div class="var">{{bot.won}}</div>
+</div>
+
+<div class="box1" *ngIf="bot">
+    <div class="str">high-<br>score</div>
+    <div class="var">{{bot.score}}</div>
+</div>
+
+<div class="box2" *ngIf="bot">
+    <div class="str">Games<br>lost</div>
+    <div class="var">{{bot.lost}}</div>
 </div>

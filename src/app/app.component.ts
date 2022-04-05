@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Bot } from './api';
 import { BotService } from './bot.service';
-import { faUser, faHome } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faHome, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   title = 'schniekern_web_application';
   faUser = faUser;
   faHome = faHome
+  faMagnifyingGlass = faMagnifyingGlass
 
 
 bots: Bot[] = [];

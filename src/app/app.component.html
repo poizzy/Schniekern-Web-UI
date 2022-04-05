@@ -1,6 +1,8 @@
-<div class="sidebar">
+<div class="sidebar" id="scroll">
   <ul class="player">
     <h1>Players</h1>
+    <input type="search" placeholder="Search...">
+    <span><button type="submit" class="searchbutton"><fa-icon [icon]="faMagnifyingGlass"></fa-icon></button></span>
     <li *ngFor="let bot of bots">
       <nav>
         <a routerLink="/detail/{{bot.id}}">
