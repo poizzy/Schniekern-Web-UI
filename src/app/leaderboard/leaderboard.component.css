@@ -1,0 +1,11 @@
+.leaderboard {
+    background: rgb(255, 255, 255);
+    position: fixed;
+    top: 200px;
+    left: 300px;
+    width: 225px;
+    height: 350px;
+    padding: 20px 0;
+    border-radius: 40px;
+    box-shadow: 10px 5px 5px gray;
+}

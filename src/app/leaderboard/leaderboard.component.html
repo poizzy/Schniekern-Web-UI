@@ -1,0 +1,5 @@
+<div class="leaderboard">
+    <ul *ngFor="let bot of bots;let indexOfelement=index;">
+        <li class="player"> {{indexOfelement+1}} {{bot.name}} <span class="playerWon">{{bot.won}}</span></li>
+    </ul>
+</div>
