@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Bot } from './api';
 import { BotService } from './bot.service';
 import { faUser, faHome, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
@@ -8,7 +8,7 @@ import { faUser, faHome, faMagnifyingGlass } from '@fortawesome/free-solid-svg-i
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnChanges {
   title = 'schniekern_web_application';
   faUser = faUser;
   faHome = faHome
@@ -26,5 +26,16 @@ bots: Bot[] = [];
   getBots(): void {
     this.botService.getPlayer()
         .subscribe(bots => this.bots = bots);
+  }
+
+  @Input() search = ""
+
+  ngOnChanges(changes: SimpleChanges) {
+    for (const propName in changes) {
+      const chng = changes[propName];
+      const cur  = JSON.stringify(chng.currentValue);
+      const prev = JSON.stringify(chng.previousValue);
+      console.log(`${propName}: currentValue = ${cur}, previousValue = ${prev}`);
+    }
   }
 }

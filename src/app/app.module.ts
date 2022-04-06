@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { PlayerDetailComponent } from './player-detail/player-detail.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FilterPipe } from './filter.pipe';
+import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { FilterPipe } from './filter.pipe';
     AppComponent,
     PlayerDetailComponent,
     FilterPipe,
+    LeaderboardComponent,
   ],
   imports: [
     BrowserModule,

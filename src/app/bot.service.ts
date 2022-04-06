@@ -22,5 +22,7 @@ export class BotService {
     return this.http.get<Bot[]>(this.apiurl).pipe(
       tap(_=> console.log("hallo"))
     ) 
+    
   }
+  
 }
