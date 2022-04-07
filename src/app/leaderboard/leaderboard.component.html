@@ -1,5 +1,14 @@
 <div class="leaderboard">
-    <ul *ngFor="let bot of bots;let indexOfelement=index;">
-        <li class="player"> {{indexOfelement+1}} {{bot.name}} <span class="playerWon">{{bot.won}}</span></li>
-    </ul>
+    <h1>leaderboard</h1>
+    <h2>no.</h2>
+    <h2>won</h2>
+    <h2>name</h2>
+    <div *ngFor="let bot of bots;let indexOfelement=index;">
+        <a routerLink="/detail/{{bot.id}}" class="player">
+            <span class="icon"><fa-icon [icon]="faUser"></fa-icon></span>
+            <span class="index">{{indexOfelement+1}}</span>
+            <span class="playerWon">{{bot.won}}</span>
+            <span class="name">{{bot.name}}</span>
+        </a>
+    </div>
 </div>

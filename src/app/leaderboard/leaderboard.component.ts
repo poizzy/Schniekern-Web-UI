@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Bot } from '../api';
 import { BotService } from '../bot.service';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-leaderboard',
@@ -10,6 +11,7 @@ import { BotService } from '../bot.service';
 
 export class LeaderboardComponent implements OnInit {
 
+  faUser = faUser;
   constructor(private botService: BotService) { }
   
   bots: Bot[] = [];

@@ -28,14 +28,16 @@ bots: Bot[] = [];
         .subscribe(bots => this.bots = bots);
   }
 
-  @Input() search = ""
+  @Input() search:string = ""
 
   ngOnChanges(changes: SimpleChanges) {
     for (const propName in changes) {
       const chng = changes[propName];
       const cur  = JSON.stringify(chng.currentValue);
       const prev = JSON.stringify(chng.previousValue);
-      console.log(`${propName}: currentValue = ${cur}, previousValue = ${prev}`);
+      console.log(cur);
+      console.log(prev);
+      console.log("test")
     }
   }
 }
